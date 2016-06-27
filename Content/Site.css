@@ -1,0 +1,48 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background: url('http://widewallpaper.info/wp-content/uploads/2016/03/Anime-Wallpaper-3840x2160-097.jpg');
+    background-size: cover;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+/* if this is commentet out the text boxes i have in my create and edit form will fill out its whole 10 instead of only having the max width of 280 px*/
+input,
+select,
+textarea {
+    max-width: 313px;
+}
+p {
+    color: Red;
+}
+h1 {
+    color: Red;
+}
+h2 {
+    color: Red;
+}
+h3 {
+    color: Red;
+}
+div {
+    color: Red;
+}
+.table {
+    color: Red;
+}
+-form-group {
+    color: Red;
+}
