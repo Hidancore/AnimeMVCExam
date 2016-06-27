@@ -1,0 +1,53 @@
+﻿@model AnimeMVCExam.Models.Anime
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Selected movie</h4>
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.AnimeId)
+        <img src="@Url.Content(Model.WallPaper)" alt="Image" />
+        <h1>
+            @Html.DisplayFor(model => model.Title)
+
+        </h1>
+        <h3>
+            @Html.DisplayNameFor(model => model.ProduktionYear):
+            
+            
+        </h3>
+        <p>
+            @Html.DisplayFor(model => model.ProduktionYear)
+        </p>
+        <h3>
+            @Html.DisplayNameFor(model => model.Episodes):
+            
+        </h3>
+        <p>
+            @Html.DisplayFor(model => model.Episodes)
+        </p>
+        <h3>
+            @Html.DisplayNameFor(model => model.Description):
+
+        </h3>
+        <p>
+            @Html.DisplayFor(model => model.Description)
+        </p>
+        
+
+
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

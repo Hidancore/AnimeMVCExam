@@ -1,0 +1,56 @@
+﻿
+@model IEnumerable<AnimeMVCExam.Models.Anime>   
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Anime LISTE!</h2>
+<style>
+    body {
+        background-color: white;
+    }
+</style>
+
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Show All", "Index")
+    @Html.ActionLink("Order By Title", "OrderByTitle")
+    @Html.ActionLink("Order By Episodes", "OrderByEpisodes")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Episodes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProduktionYear)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Episodes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProduktionYear)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.AnimeId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.AnimeId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.AnimeId })
+            </td>
+        </tr>
+    }
+
+</table>
+
